@@ -24,12 +24,12 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--weight", type=str, default=None)
     parser.add_argument("--lr", type=float, default=0.1)#0.01
-    parser.add_argument("--n_epoch", type=int, default=40)#30
+    parser.add_argument("--n_epoch", type=int, default=30)#30
     parser.add_argument("--batch_size", type=int, default=64)
     parser.add_argument("--n_gen", type=int, default=5)
     parser.add_argument("--resume_gen", type=int, default=0)
     parser.add_argument("--dataset", type=str, default="cifar100")
-    parser.add_argument("--outdir", type=str, default="BAN_cifar100_resnet32_run1")
+    parser.add_argument("--outdir", type=str, default="BAN_cifar100_resnet18_more_aug_run1")
     parser.add_argument("--print_interval", type=int, default=50)
     #added
     parser.add_argument("--single_test", type=bool, default=False)
@@ -37,7 +37,7 @@ def main():
     parser.add_argument("--evaluate", type=bool, default=False)
     parser.add_argument("--n_classes", type=int, default=100)
     parser.add_argument("--root_dir", type=str, default='/gruntdata4/xiaoxi.xjl/classification_datasets')
-    parser.add_argument("--model_name", type=str, default="resnet32")
+    parser.add_argument("--model_name", type=str, default="resnet18")
     args = parser.parse_args()
 
     setup_seed(96)
